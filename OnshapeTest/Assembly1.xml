@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SimscapeMultibodyImportXML xmlns="urn:mathworks:SimscapeMultibody:import"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            version="2.0">
+   <Created by="Kieran Pereira" from="Onshape" on="10/27/24||21:23:21"
+            using="Simscape Multibody Exporter"/>
+   <ModelUnits length="millimeter" mass="pound"/>
+   <DataUnits length="meter" mass="kilogram"/>
+   <RootAssembly name="Assembly 1" uid="902660ec2b76fe9daf242aae"
+                 version="w-0a6e624b381ac907ab6fe9cd">
+      <InstanceTree>
+         <Instance entityUid="JFD*:*93d5c65980ccf2edd538c693" name="newupperleg v3 &lt;2&gt;"
+                   uid="M8F9TE2V0niUsmzvw">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+               <Translation>0.309235190 -0.380801438 0.035403954 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*2d7e37f246b7c31ebf16639f" name="Component1 &lt;1&gt;"
+                   uid="MA28JIYrfD4VXJa+u">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>-0.390063558 -0.882487558 -0.520909926 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*80b763faec6b60b7a27f3a31" name="robobody v1 &lt;1&gt;"
+                   uid="MBhh4XGYt6xT1dorQ">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>-0.040764810 -0.212074112 0.057503521 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*93d5c65980ccf2edd538c693" name="newupperleg v3 &lt;4&gt;"
+                   uid="MNZa7dZLltWRR/vPU">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+               <Translation>-0.390764810 0.219198562 0.035403954 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*2d7e37f246b7c31ebf16639f" name="Component1 &lt;3&gt;"
+                   uid="MVgmNz5C0pBCaxtEn">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>0.309936442 -0.122487558 -0.520909926 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*2d7e37f246b7c31ebf16639f" name="Component1 &lt;2&gt;"
+                   uid="MohpU9l/bs4WnW+Ke">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>0.309936442 -0.882487558 -0.520909926 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*2d7e37f246b7c31ebf16639f" name="Component1 &lt;4&gt;"
+                   uid="MrUvGf71a6rk5Wi2P">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>-0.390063558 -0.122487558 -0.520909926 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*93d5c65980ccf2edd538c693" name="newupperleg v3 &lt;1&gt;"
+                   uid="Mve/NHRjAn84Go6CF">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+               <Translation>-0.390764810 -0.380801438 0.035403954 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JFD*:*93d5c65980ccf2edd538c693" name="newupperleg v3 &lt;3&gt;"
+                   uid="Mw9Ev7NBxkey5k4EM">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+               <Translation>0.309235190 0.219198562 0.035403954 </Translation>
+            </Transform>
+         </Instance>
+      </InstanceTree>
+      <Constraints/>
+      <Joints>
+         <Revolute name="Revolute1">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>Mve/NHRjAn84Go6CF</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 -0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>0.000000000 0.151686120 0.048313880 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MBhh4XGYt6xT1dorQ</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>-0.350000000 -0.320413446 -0.070413446 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Revolute2">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>M8F9TE2V0niUsmzvw</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 -0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>0.000000000 0.151686120 0.048313880 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MBhh4XGYt6xT1dorQ</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>0.350000000 -0.320413446 -0.070413446 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Revolute3">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>MBhh4XGYt6xT1dorQ</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>0.350000000 0.379586554 -0.070413446 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>Mw9Ev7NBxkey5k4EM</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>0.000000000 0.051686120 0.048313880 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Revolute4">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>MBhh4XGYt6xT1dorQ</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>-0.350000000 0.379586554 -0.070413446 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MNZa7dZLltWRR/vPU</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>0.000000000 0.051686120 0.048313880 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Revolute5">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>Mve/NHRjAn84Go6CF</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>0.000000000 0.051686120 0.248313880 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MA28JIYrfD4VXJa+u</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>-0.000701252 0.450000000 0.308000000 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Revolute6">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>M8F9TE2V0niUsmzvw</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>0.000000000 0.051686120 0.248313880 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MohpU9l/bs4WnW+Ke</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>-0.000701252 0.450000000 0.308000000 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Revolute7">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>Mw9Ev7NBxkey5k4EM</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>0.000000000 0.151686120 0.248313880 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MVgmNz5C0pBCaxtEn</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>-0.000701252 0.190000000 0.308000000 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Revolute8">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>MNZa7dZLltWRR/vPU</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>0.000000000 0.151686120 0.248313880 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MrUvGf71a6rk5Wi2P</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 </Rotation>
+                  <Translation>-0.000701252 0.190000000 0.308000000 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+      </Joints>
+   </RootAssembly>
+   <Assemblies/>
+   <Parts>
+      <Part name="Component1" uid="JFD*:*2d7e37f246b7c31ebf16639f">
+         <ModelUnits length="millimeter" mass="pound"/>
+         <MassProperties>
+            <Mass>0</Mass>
+            <CenterOfMass>0.000000000 0.000000000 0.000000000 </CenterOfMass>
+            <Inertia>0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 </Inertia>
+         </MassProperties>
+         <GeometryFile name="Component1.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.647058824" g="0.647058824" r="0.647058824"/>
+            <Diffuse a="1.000000000" b="0.647058824" g="0.647058824" r="0.647058824"/>
+            <Specular a="1.000000000" b="0.647058824" g="0.647058824" r="0.647058824"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+      <Part name="robobody v1" uid="JFD*:*80b763faec6b60b7a27f3a31">
+         <ModelUnits length="millimeter" mass="pound"/>
+         <MassProperties>
+            <Mass>0</Mass>
+            <CenterOfMass>0.000000000 0.000000000 0.000000000 </CenterOfMass>
+            <Inertia>0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 </Inertia>
+         </MassProperties>
+         <GeometryFile name="robobody v1.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.003921569" g="0.529411765" r="0.972549020"/>
+            <Diffuse a="1.000000000" b="0.003921569" g="0.529411765" r="0.972549020"/>
+            <Specular a="1.000000000" b="0.003921569" g="0.529411765" r="0.972549020"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+      <Part name="newupperleg v3" uid="JFD*:*93d5c65980ccf2edd538c693">
+         <ModelUnits length="millimeter" mass="pound"/>
+         <MassProperties>
+            <Mass>0</Mass>
+            <CenterOfMass>0.000000000 0.000000000 0.000000000 </CenterOfMass>
+            <Inertia>0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 </Inertia>
+         </MassProperties>
+         <GeometryFile name="newupperleg v3.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.003921569" g="0.713725490" r="0.980392157"/>
+            <Diffuse a="1.000000000" b="0.003921569" g="0.713725490" r="0.980392157"/>
+            <Specular a="1.000000000" b="0.003921569" g="0.713725490" r="0.980392157"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+   </Parts>
+</SimscapeMultibodyImportXML>
