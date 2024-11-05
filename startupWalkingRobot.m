@@ -28,4 +28,4 @@ load("OnshapeTest\cheetah_trajectory.mat")
 
 %% Loading custom data
 custom_joint_data = readmatrix('ModelingSimulation\JointAnglesOnShape.csv');
-
+default_model_joint_data = readmatrix('ModelingSimulation\JointAnglesDefault.csv');
