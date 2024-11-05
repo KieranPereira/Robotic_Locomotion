@@ -21,6 +21,11 @@ addpath(genpath('LIPM'), ...                    % Linear inverted pendulum model
 robotParameters
 run('CAD Files\Importing_CAD.m')
 
+% Only run if CAD model has changed on OnShape
+%run("OnshapeTest\Onshape_Test.m")
+run("OnshapeTest\Assembly1_DataFile.m")
+load("OnshapeTest\cheetah_trajectory.mat")
+
 %% Loading custom data
 custom_joint_data = readmatrix('ModelingSimulation\JointAnglesOnShape.csv');
-%load('C:\Users\kiera\OneDrive\Documents\Berkeley\ME 239- Robotic Locomotion\Project\Current\OnshapeTest\cheetah_trajectory.mat')
+
