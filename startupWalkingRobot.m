@@ -42,6 +42,4 @@ Default_left_data = jAngsL(:, [1, 4, 5]);
 Default_right_data = jAngsR(:, [1, 4, 5]);
 
 %loading Cheetah Gait Cycles (will need to replace with your path):
-load('jAngs_cheetah.mat')
-jAngsF_cheetah = jAngsF_cheetah(:, [1, 4, 5]);
-jAngsH_cheetah = jAngsH_cheetah(:, [1, 4, 5]);
+load('jAngs_cheetah_rad.mat')
