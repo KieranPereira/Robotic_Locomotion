@@ -2,7 +2,7 @@
 Copyright 2017-2019 The MathWorks, Inc.
 
 ## Introduction
-This repository contains example files for the following [MATLAB and Simulink Robotics Arena](https://www.mathworks.com/academia/student-competitions/roboticsarena.html) videos on walking robots.
+This repository' contains example files for the following [MATLAB and Simulink Robotics Arena](https://www.mathworks.com/academia/student-competitions/roboticsarena.html) videos on walking robots.
 
 * [Basics of walking robots](https://www.mathworks.com/videos/model-based-control-of-humanoid-walking-1574399243682.html)
 * [Modeling and simulation](https://www.mathworks.com/videos/modeling-and-simulation-of-walking-robots-1576560207573.html)
