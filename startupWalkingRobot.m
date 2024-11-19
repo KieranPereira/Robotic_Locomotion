@@ -43,6 +43,6 @@ Default_right_data = jAngsR(:, [1, 4, 5]);
 
 %loading Cheetah Gait Cycles (will need to replace with your path):
 %load('jAngs_cheetah_10_rad.mat');
-load('jAngs_cheetah_10steps_rad.mat');
+load('jAngs_cheetah_with_stationary2.mat');
 %load('quadruped_walking_gait_data.mat');
-load('quadruped_gait_with_stationary.mat');
+load('quadruped_gait_with_stationary2.mat');
