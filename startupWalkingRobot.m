@@ -42,15 +42,15 @@ Default_left_data = jAngsL(:, [1, 4, 5]);
 Default_right_data = jAngsR(:, [1, 4, 5]);
 
 %loading Cheetah Gait Cycles (will need to replace with your path):
-<<<<<<< HEAD
-load('jAngs_cheetah_10_rad.mat');
+load('jAngs_cheetah_55_rad.mat');
 
 %% Open the Simscape Multibody Assembly
 blade_stiffness = 21500; 
-half_leg_weight = 5;
-body_weight = 20;
+half_leg_weight = 3.5;
+body_weight = 25;
 friction_coefficient = 0.7;
-back_leg_weight = 7;
+back_leg_weight = 3.5;
+gravity = 15;
 
 %load('jAngs_cheetah_10_rad.mat');
 load('jAngs_cheetah_55_rad.mat');
