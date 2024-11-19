@@ -51,8 +51,8 @@ half_leg_weight = 5;
 body_weight = 20;
 friction_coefficient = 0.7;
 back_leg_weight = 7;
-=======
+
 %load('jAngs_cheetah_10_rad.mat');
 load('jAngs_cheetah_55_rad.mat');
 load('quadruped_walking_gait_data.mat');
->>>>>>> 9278ee668f73abda2c9cf0143f70bdaba29c2ea4
+
