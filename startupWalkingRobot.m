@@ -50,7 +50,7 @@ half_leg_weight = 3.5;
 body_weight = 25;
 friction_coefficient = 0.7;
 back_leg_weight = 3.5;
-gravity = 15;
+gravity = 9.81;
 
 %load('jAngs_cheetah_10_rad.mat');
 load('jAngs_cheetah_55_rad.mat');
