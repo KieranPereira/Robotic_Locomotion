@@ -26,9 +26,13 @@ run('CAD Files\Importing_CAD.m')
 run("OnshapeTest\Assembly1_DataFile.m")
 load("Gait Cycles\cheetah_trajectory.mat")
 
+
+
 %% Loading custom data
 custom_joint_data = readmatrix('Gait Cycles\JointAnglesOnShape.csv');
 default_model_joint_data = readmatrix('Gait Cycles\JointAnglesDefault_Left.csv');
+
+
 %% Gait Cycle Loading
 % Loading Cheetah Gait Cycle
 data = load('jointAngs.mat','jAngsL');
@@ -46,3 +50,20 @@ Default_right_data = jAngsR(:, [1, 4, 5]);
 load('jAngs_cheetah_with_stationary2.mat');
 %load('quadruped_walking_gait_data.mat');
 load('quadruped_gait_with_stationary2.mat');
+
+%%
+% Define leg weights
+back_leg_weight = 2.5;      % Example mass for the back leg in kg
+half_leg_weight = 1.5;      % Example mass for half of the leg in kg
+body_weight = 10;           % Example mass for the robotic body in kg
+
+% Define friction coefficient
+friction_coefficient = 0.8; % Example static/dynamic friction coefficient
+
+% Define blade stiffness
+blade_stiffness = 10000;    % Example stiffness value in N/m
+
+% Define gravity (assuming Earth's gravity)
+gravity = 9.81;    % Gravity vector in m/s^2 (pointing downward)
+
+% Optionally, define other parameters as needed for the model
