@@ -61,7 +61,7 @@ body_weight = 10;           % Example mass for the robotic body in kg
 friction_coefficient = 0.8; % Example static/dynamic friction coefficient
 
 % Define blade stiffness
-blade_stiffness = 10000;    % Example stiffness value in N/m
+blade_stiffness = 10;    % Example stiffness value in N/m
 
 % Define gravity (assuming Earth's gravity)
 gravity = 9.81;    % Gravity vector in m/s^2 (pointing downward)

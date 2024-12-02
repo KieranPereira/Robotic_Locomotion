@@ -23,11 +23,11 @@ function penalty = simulateWalkingRobot(params,mdlName,scaleFactor,gait_period,a
     % Evaluate the trajectory at the start and halfway points for right and
     % left legs, respectively, to get initial conditions and trajectory
     % waypoint derivatives
-    [q,hip_der,knee_der,ankle_der] = createSmoothTrajectory( ... 
-        hip_motion,knee_motion,ankle_motion,gait_period,[0 gait_period/2]);
+    [q,hip_der,knee_der] = createSmoothTrajectory( ... 
+        hip_motion,knee_motion,gait_period,[0 gait_period/2]);
     % Package up the initial conditions, keeping the yaw/roll joints fixed
-    init_angs_R = [0 0 -q(1,1) -q(2,1) -q(3,1) 0];
-    init_angs_L = [0 0 -q(1,2) -q(2,2) -q(3,2) 0];
+    init_angs_R = [0 0 -q(1,1) -q(2,1) 0 0];
+    init_angs_L = [0 0 -q(1,2) -q(2,2) 0 0];
 
     % Simulate the model
     simout = sim(mdlName,'StopTime','10','SrcWorkspace','current','FastRestart','on');          
@@ -42,7 +42,7 @@ function penalty = simulateWalkingRobot(params,mdlName,scaleFactor,gait_period,a
     
     %   Longitudinal (Y) distance traveled without falling 
     %   (ending simulation early) increases reward
-    positiveReward = sign(yEnd)*yEnd^2 * tEnd;
+    positiveReward = -sign(yEnd)*yEnd^2 * tEnd;
     
     %   Lateral (Y) displacement and trajectory aggressiveness 
     %   (number of times the derivative flips signs) decreases reward
