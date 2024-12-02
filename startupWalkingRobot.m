@@ -23,18 +23,22 @@ run('CAD Files\Importing_CAD.m')
 
 % Only run if CAD model has changed on OnShape
 %run("OnshapeTest\Onshape_Test.m")
-run("OnshapeTest/Assembly1_DataFile.m")
-load("Gait Cycles/cheetah_trajectory.mat")
+run("OnshapeTest\Assembly1_DataFile.m")
+load("Gait Cycles\cheetah_trajectory.mat")
+
+
 
 %% Loading custom data
-custom_joint_data = readmatrix('Gait Cycles/JointAnglesOnShape.csv');
-default_model_joint_data = readmatrix('Gait Cycles/JointAnglesDefault_Left.csv');
+custom_joint_data = readmatrix('Gait Cycles\JointAnglesOnShape.csv');
+default_model_joint_data = readmatrix('Gait Cycles\JointAnglesDefault_Left.csv');
+
+
 %% Gait Cycle Loading
 % Loading Cheetah Gait Cycle
 data = load('jointAngs.mat','jAngsL');
-writematrix(data.jAngsL, 'Gait Cycles/DefaultLeft.csv');
+writematrix(data.jAngsL, 'Gait Cycles\DefaultLeft.csv');
 data = load('jointAngs.mat','jAngsR');
-writematrix(data.jAngsR, 'Gait Cycles/DefaultRight.csv');
+writematrix(data.jAngsR, 'Gait Cycles\DefaultRight.csv');
 
 load("jointAngs.mat");
 
@@ -50,8 +54,13 @@ default_right_data_hip = Default_right_data(:,2);
 default_right_data_ankle = Default_right_data(:,3);
 
 %loading Cheetah Gait Cycles (will need to replace with your path):
-load('jAngs_cheetah_55_rad.mat');
+%load('jAngs_cheetah_10_rad.mat');
+load('jAngs_cheetah_with_stationary2.mat');
+%load('quadruped_walking_gait_data.mat');
+load('quadruped_gait_with_stationary2.mat');
 
+%%
+% Define leg weights
 %% Open the Simscape Multibody Assembly
 blade_stiffness = 21500;
 half_leg_weight = 3.5;

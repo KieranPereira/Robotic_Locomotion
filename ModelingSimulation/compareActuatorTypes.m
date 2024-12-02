@@ -4,6 +4,8 @@
 
 %% Setup
 clc; close all;
+%load optimized data
+load optimizedData_29Nov24_1209
 mdlName = 'walkingRobot';
 bdclose(mdlName)
 open_system(mdlName)
@@ -17,7 +19,7 @@ tic; simout_torque = sim(mdlName,'StopTime','10');
 disp(['Compiled and ran Torque actuated simulation in ' num2str(toc) ' seconds']);
 actuatorType = 3;
 tic; simout_motor = sim(mdlName,'StopTime','10');
-disp(['Compiled and ran Motor actuated simulation in ' num2str(toc) ' seconds']);
+%disp(['Compiled and ran Motor actuated simulation in ' num2str(toc) ' seconds']);
 
 %% Torso Position Plots
 figure(1)
@@ -25,7 +27,7 @@ subplot(3,1,1)
 hold on
 plot(get(simout_motion.simout,'measBody').Values.X.Time,get(simout_motion.simout,'measBody').Values.X.Data,'b-');
 plot(get(simout_torque.simout,'measBody').Values.X.Time,get(simout_torque.simout,'measBody').Values.X.Data,'r-');
-plot(get(simout_motor.simout,'measBody').Values.X.Time, get(simout_motor.simout,'measBody').Values.X.Data, 'k-');
+%plot(get(simout_motor.simout,'measBody').Values.X.Time, get(simout_motor.simout,'measBody').Values.X.Data, 'k-');
 title('Robot Motion')
 legend('Motion','Torque','Motor');
 title('Simulation Output Comparisons');
@@ -35,7 +37,7 @@ subplot(3,1,2)
 hold on
 plot(get(simout_motion.simout,'measBody').Values.Y.Time,get(simout_motion.simout,'measBody').Values.Y.Data,'b-');
 plot(get(simout_torque.simout,'measBody').Values.Y.Time,get(simout_torque.simout,'measBody').Values.Y.Data,'r-');
-plot(get(simout_motor.simout,'measBody').Values.Y.Time, get(simout_motor.simout,'measBody').Values.Y.Data, 'k-');
+%plot(get(simout_motor.simout,'measBody').Values.Y.Time, get(simout_motor.simout,'measBody').Values.Y.Data, 'k-');
 title('Robot Motion')
 legend('Motion','Torque','Motor');
 xlabel('Time [s]');
@@ -44,7 +46,7 @@ subplot(3,1,3)
 hold on
 plot(get(simout_motion.simout,'measBody').Values.Z.Time,get(simout_motion.simout,'measBody').Values.Z.Data,'b-');
 plot(get(simout_torque.simout,'measBody').Values.Z.Time,get(simout_torque.simout,'measBody').Values.Z.Data,'r-');
-plot(get(simout_motor.simout,'measBody').Values.Z.Time, get(simout_motor.simout,'measBody').Values.Z.Data, 'k-');
+%plot(get(simout_motor.simout,'measBody').Values.Z.Time, get(simout_motor.simout,'measBody').Values.Z.Data, 'k-');
 title('Robot Motion')
 legend('Motion','Torque','Motor');
 xlabel('Time [s]');
@@ -62,7 +64,7 @@ for idx = 1:6
     modifier = [jName '_angle'];
     plot(get(simout_motion.simout,'measR').Values.(modifier).Time,get(simout_motion.simout,'measR').Values.(modifier).Data,'b-');
     plot(get(simout_torque.simout,'measR').Values.(modifier).Time,get(simout_torque.simout,'measR').Values.(modifier).Data,'r-');
-    plot(get(simout_motor.simout,'measR').Values.(modifier).Time, get(simout_motor.simout,'measR').Values.(modifier).Data, 'k-');
+    %plot(get(simout_motor.simout,'measR').Values.(modifier).Time, get(simout_motor.simout,'measR').Values.(modifier).Data, 'k-');
     legend('Motion','Torque','Motor');
     xlabel('Time [s]');
     ylabel('Joint Angle [rad]');
@@ -74,7 +76,7 @@ for idx = 1:6
     modifier = [jName '_torque'];
     plot(get(simout_motion.simout,'measR').Values.(modifier).Time,get(simout_motion.simout,'measR').Values.(modifier).Data,'b-');
     plot(get(simout_torque.simout,'measR').Values.(modifier).Time,get(simout_torque.simout,'measR').Values.(modifier).Data,'r-');
-    plot(get(simout_motor.simout,'measR').Values.(modifier).Time, get(simout_motor.simout,'measR').Values.(modifier).Data, 'k-');
+    %plot(get(simout_motor.simout,'measR').Values.(modifier).Time, get(simout_motor.simout,'measR').Values.(modifier).Data, 'k-');
     legend('Motion','Torque','Motor');
     xlabel('Time [s]');
     ylabel('Joint Torque [N*m]');
