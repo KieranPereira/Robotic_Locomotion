@@ -45,6 +45,14 @@ load("jointAngs.mat");
 Default_left_data = jAngsL(:, [1, 4, 5]);
 Default_right_data = jAngsR(:, [1, 4, 5]);
 
+default_left_data_time = Default_left_data(:,1);
+default_left_data_hip = Default_left_data(:,2);
+default_left_data_ankle = Default_left_data(:,3);
+
+default_right_data_time = Default_right_data(:,1);
+default_right_data_hip = Default_right_data(:,2);
+default_right_data_ankle = Default_right_data(:,3);
+
 %loading Cheetah Gait Cycles (will need to replace with your path):
 %load('jAngs_cheetah_10_rad.mat');
 load('jAngs_cheetah_with_stationary2.mat');
@@ -53,13 +61,19 @@ load('quadruped_gait_with_stationary2.mat');
 
 %%
 % Define leg weights
-back_leg_weight = 2.5;      % Example mass for the back leg in kg
-half_leg_weight = 1.5;      % Example mass for half of the leg in kg
-body_weight = 10;           % Example mass for the robotic body in kg
+%% Open the Simscape Multibody Assembly
+blade_stiffness = 21500;
+half_leg_weight = 3.5;
+body_weight = 25;
+friction_coefficient = 0.9;
+back_leg_weight = 3.5;
+gravity = 9.81;
 
-% Define friction coefficient
-friction_coefficient = 0.8; % Example static/dynamic friction coefficient
+%load('jAngs_cheetah_10_rad.mat');
+load('jAngs_cheetah_55_rad.mat');
+load('quadruped_walking_gait_data.mat');
 
+<<<<<<< HEAD
 % Define blade stiffness
 blade_stiffness = 10;    % Example stiffness value in N/m
 
@@ -67,3 +81,5 @@ blade_stiffness = 10;    % Example stiffness value in N/m
 gravity = 9.81;    % Gravity vector in m/s^2 (pointing downward)
 
 % Optionally, define other parameters as needed for the model
+=======
+>>>>>>> 143ee2faa26697f6fb0906b2f27f80a203089fc3
