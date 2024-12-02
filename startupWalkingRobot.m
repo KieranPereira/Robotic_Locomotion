@@ -41,14 +41,22 @@ load("jointAngs.mat");
 Default_left_data = jAngsL(:, [1, 4, 5]);
 Default_right_data = jAngsR(:, [1, 4, 5]);
 
+default_left_data_time = Default_left_data(:,1);
+default_left_data_hip = Default_left_data(:,2);
+default_left_data_ankle = Default_left_data(:,3);
+
+default_right_data_time = Default_right_data(:,1);
+default_right_data_hip = Default_right_data(:,2);
+default_right_data_ankle = Default_right_data(:,3);
+
 %loading Cheetah Gait Cycles (will need to replace with your path):
 load('jAngs_cheetah_55_rad.mat');
 
 %% Open the Simscape Multibody Assembly
-blade_stiffness = 21500; 
+blade_stiffness = 21500;
 half_leg_weight = 3.5;
 body_weight = 25;
-friction_coefficient = 0.7;
+friction_coefficient = 0.9;
 back_leg_weight = 3.5;
 gravity = 9.81;
 
