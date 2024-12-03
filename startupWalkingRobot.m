@@ -70,16 +70,18 @@ back_leg_weight = 3.5;
 gravity = 9.81;
 
 %load('jAngs_cheetah_10_rad.mat');
-load('jAngs_cheetah_55_rad.mat');
-load('quadruped_walking_gait_data.mat');
+%load('jAngs_cheetah_55_rad.mat');
+%load('quadruped_walking_gait_data.mat');
 
-<<<<<<< HEAD
+%For Optimization
+load('walking_waypoints.mat');
+%load('cheetah_waypoints.mat');
+
 % Define blade stiffness
-blade_stiffness = 10;    % Example stiffness value in N/m
+%blade_stiffness = 10;    % Example stiffness value in N/m
 
 % Define gravity (assuming Earth's gravity)
 gravity = 9.81;    % Gravity vector in m/s^2 (pointing downward)
 
 % Optionally, define other parameters as needed for the model
-=======
->>>>>>> 143ee2faa26697f6fb0906b2f27f80a203089fc3
+

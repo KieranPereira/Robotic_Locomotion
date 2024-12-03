@@ -23,12 +23,18 @@ function penalty = simulateWalkingRobot(params,mdlName,scaleFactor,gait_period,a
     % Evaluate the trajectory at the start and halfway points for right and
     % left legs, respectively, to get initial conditions and trajectory
     % waypoint derivatives
-    [q,hip_der,knee_der] = createSmoothTrajectory( ... 
-        hip_motion,knee_motion,gait_period,[0 gait_period/2]);
+    [q_F,hip_der_F,knee_der_F,ankle_der_F] = createSmoothTrajectory( ... 
+        hip_motion_F,knee_motion_F,gait_period,[0 gait_period/2]);
     % Package up the initial conditions, keeping the yaw/roll joints fixed
-    init_angs_R = [0 0 -q(1,1) -q(2,1) 0 0];
-    init_angs_L = [0 0 -q(1,2) -q(2,2) 0 0];
+    init_angs_FR = [0 0 -q_F(1,1) -q_F(2,1) 0];
+    init_angs_FL = [0 0 -q_F(1,2) -q_F(2,2) 0];
 
+    [q_H,hip_der_H,knee_der_H,ankle_der_H] = createSmoothTrajectory( ... 
+        hip_motion_H,knee_motion_H,gait_period,[0 gait_period/2]);
+    % Package up the initial conditions, keeping the yaw/roll joints fixed
+    init_angs_HR = [0 0 -q_H(1,1) -q_H(2,1) 0];
+    init_angs_HL = [0 0 -q_H(1,2) -q_H(2,2) 0];
+    
     % Simulate the model
     simout = sim(mdlName,'StopTime','10','SrcWorkspace','current','FastRestart','on');          
 
