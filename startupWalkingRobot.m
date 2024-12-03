@@ -14,8 +14,8 @@ addpath(genpath('LIPM'), ...                    % Linear inverted pendulum model
         genpath('ControlDesign'), ...           % Control design files
         genpath('ReinforcementLearning'), ...   % Reinforcement learning files
         genpath('OnshapeTest'), ... 
-        genpath('Libraries'));                  % Other dependencies
-        genpath('CAD Files')
+        genpath('Libraries'),...                  % Other dependencies
+        genpath('CAD Files'));
 
 %% Load basic robot parameters from modeling and simulation example
 robotParameters
