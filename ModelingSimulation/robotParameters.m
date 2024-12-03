@@ -74,3 +74,11 @@ motor_inertia = 1e-5;
 motor_damping = 1e-5;
 motor_inductance = 250e-6;
 gear_ratio = 100;
+
+%% Open the Simscape Multibody Assembly
+blade_stiffness = 21500;
+half_leg_weight = 3.5;
+body_weight = 25;
+friction_coefficient = 0.9;
+back_leg_weight = 3.5;
+gravity = 9.81;
