@@ -3,8 +3,8 @@
 
 % Parameters
 n = 100;                  % Interpolation points per gait
-tt = 22;                   % Total time for the motion (seconds)
-t_stationary = 2;          % Time at the start where the robot is stationary (seconds)
+tt = 5;                   % Total time for the motion (seconds)
+t_stationary = 0;          % Time at the start where the robot is stationary (seconds)
 steps = 5;                % Total number of steps
 t_gait = (tt - t_stationary) / steps; % Period for each gait cycle (seconds)
 phase_offset=0.5;
@@ -77,8 +77,9 @@ fore_leg_traj = [t_gait_points', fore_hip'+90, -fore_knee'];
 hind_leg_traj = [t_gait_points', hind_hip'+90, -hind_knee'];
 
 %phase offset
-hind_leg_traj(:,2:3)=circshift(hind_leg_traj(:,2:3), phase_offset*n,1)
-
+if steps ~= 1
+    hind_leg_traj(:,2:3)=circshift(hind_leg_traj(:,2:3), phase_offset*n,1);
+end
 
 % Initialize arrays for entire sequence
 jAngsF_cheetah = zeros(length(t_total), 3);
@@ -110,8 +111,16 @@ jAngsH_cheetah_rad(:, 2:3) = deg2rad(jAngsH_cheetah_rad(:, 2:3));
 
 
 %% Save data
-save('jAngs_cheetah_with_stationary2.mat', 'jAngsF_cheetah', 'jAngsH_cheetah', 'jAngsF_cheetah_rad', 'jAngsH_cheetah_rad');
+save('cheetah_traj_CF.mat', 'jAngsF_cheetah', 'jAngsH_cheetah', 'jAngsF_cheetah_rad', 'jAngsH_cheetah_rad');
 
+if steps==1 %for single gait cycle trajectories (making waypoints for optimization code)
+    load('jAngs_cheetah_waypoints.mat')
+    hip_motion_F=jAngsF_cheetah_rad(:,2);
+    knee_motion_F=jAngsF_cheetah_rad(:,3); %ignore left as left is just right traj with phase offset
+    hip_motion_H=jAngsH_cheetah_rad(:,2);
+    knee_motion_H=jAngsH_cheetah_rad(:,3); %ignore left as left is just right traj with phase offset
+    save('cheetah_waypoints.mat','hip_motion_F','knee_motion_F','hip_motion_H','knee_motion_H')
+end
 %% plot
 figure('Name','waypoints')
 subplot(2,1,1);

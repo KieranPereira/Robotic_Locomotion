@@ -2,13 +2,13 @@
 
 clc,clear
 % Parameters
-t_total = 10;              % Total time for the cycle (seconds)
+t_total = 5;              % Total time for the cycle (seconds)
 num_steps = 5;             % Number of steps in 10 seconds
-samples_per_leg = 1000;    % Number of time steps
+samples_per_leg = 500;    % Number of time steps
 qH = 0.3;                  % Scaling factor for hind leg
 qF = 0.0;                  % Scaling factor for fore leg
 v = 1;                     % Constant gait speed in m/s
-stationary_time = 2;       % Time for stationary phase (seconds), can be set to 0
+stationary_time = 0;       % Time for stationary phase (seconds), can be set to 0
 
 % Time sequence offsets for each leg [fore left, hind left, fore right, hind right]
 time_offsets = [0, 0.75, 0.5, 0.25];
@@ -75,7 +75,16 @@ for i = 1:length(leg_order)
 end
 
 %% Save to .mat file
- save('quadruped_gait_with_stationary2.mat', '-struct', 'gait_data');
+ save('walking_traj_CF.mat', '-struct', 'gait_data');
+
+if num_steps==1 %for single gait cycle trajectories (making waypoints for optimization code)
+    load('quadruped_gait_waypoints.mat')
+    hip_motion_F=fore_right(:,2);
+    knee_motion_F=fore_right(:,3); %ignore left as leftis just right traj with phase offset
+    hip_motion_H=hind_right(:,2);
+    knee_motion_H=hind_right(:,3);
+    save('walking_waypoints.mat','hip_motion_F','knee_motion_F','hip_motion_H','knee_motion_H')
+end
 %% plot
 figure('Name','waypoints')
 subplot(2,1,1);
