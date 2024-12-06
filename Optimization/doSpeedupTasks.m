@@ -27,6 +27,8 @@ if parallelFlag
     if accelFlag
         parfevalOnAll(@set_param,0,mdlName,'SimulationMode','accelerator');
         parfevalOnAll(@set_param,0,mdlName,'SimMechanicsOpenEditorOnUpdate','off');
+    else
+        parfevalOnAll(@set_param,0,mdlName,'SimMechanicsOpenEditorOnUpdate','on');
     end
     
     % Change each worker to unique folder so cache files do not conflict

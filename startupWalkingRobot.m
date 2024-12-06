@@ -62,7 +62,7 @@ load('quadruped_gait_with_stationary2.mat');
 %%
 % Define leg weights
 %% Open the Simscape Multibody Assembly
-blade_stiffness = 21500;
+blade_stiffness = 10500;
 half_leg_weight = 3.5;
 body_weight = 25;
 friction_coefficient = 0.9;
