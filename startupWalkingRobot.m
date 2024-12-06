@@ -14,8 +14,9 @@ addpath(genpath('LIPM'), ...                    % Linear inverted pendulum model
         genpath('ControlDesign'), ...           % Control design files
         genpath('ReinforcementLearning'), ...   % Reinforcement learning files
         genpath('OnshapeTest'), ... 
-        genpath('Libraries'),...                  % Other dependencies
-        genpath('CAD Files'));
+        genpath('Libraries'), ...               % Other dependencies
+        genpath('CAD Files'), ... 
+        genpath('Gait Cycles'));
 
 %% Load basic robot parameters from modeling and simulation example
 robotParameters
@@ -62,7 +63,7 @@ load('quadruped_gait_with_stationary2.mat');
 %%
 % Define leg weights
 %% Open the Simscape Multibody Assembly
-blade_stiffness = 10500;
+blade_stiffness = 21500;
 half_leg_weight = 3.5;
 body_weight = 25;
 friction_coefficient = 0.9;
