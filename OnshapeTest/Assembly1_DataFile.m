@@ -131,7 +131,7 @@ smiData.RigidTransform(16).ID = "F[Mw9Ev7NBxkey5k4EM:-:MVgmNz5C0pBCaxtEn]";
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(17).translation = [309.23518999999999 -380.80143800000002 35.403953999999999];  % mm
+smiData.RigidTransform(17).translation = [309.23518999999999 -380.80143800000002 45.403953999999999];  % mm
 smiData.RigidTransform(17).angle = 3.1415926535897931;  % rad
 smiData.RigidTransform(17).axis = [1 0 0];
 smiData.RigidTransform(17).ID = "SixDofRigidTransform[M8F9TE2V0niUsmzvw]";

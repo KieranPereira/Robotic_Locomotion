@@ -14,10 +14,12 @@ if parallelFlag
     
     % Add paths and dependent files to run simulations in parallel
     rootDir = fullfile(fileparts(mfilename('fullpath')),'..');
-    addAttachedFiles(p,fullfile(rootDir,{'ModelingSimulation','Optimization','Libraries'}));
+    addAttachedFiles(p,fullfile(rootDir,{'ModelingSimulation','Optimization','Libraries','OnshapeTest','CAD Files'}));
     parfevalOnAll(@addpath,0,fullfile(rootDir,'Optimization'), ... 
                              genpath(fullfile(rootDir,'ModelingSimulation')), ... 
-                             genpath(fullfile(rootDir,'Libraries')));
+                             genpath(fullfile(rootDir,'Libraries')), ...
+                             genpath(fullfile(rootDir,'OnshapeTest')), ...
+                             genpath(fullfile(rootDir,'CAD Files')));
     parfevalOnAll(@load_system,0,mdlName);
     
     % If the acceleration flag is true, set the simulation mode to
@@ -25,6 +27,8 @@ if parallelFlag
     if accelFlag
         parfevalOnAll(@set_param,0,mdlName,'SimulationMode','accelerator');
         parfevalOnAll(@set_param,0,mdlName,'SimMechanicsOpenEditorOnUpdate','off');
+    else
+        parfevalOnAll(@set_param,0,mdlName,'SimMechanicsOpenEditorOnUpdate','on');
     end
     
     % Change each worker to unique folder so cache files do not conflict
