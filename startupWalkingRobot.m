@@ -25,8 +25,7 @@ run('CAD Files\Importing_CAD.m')
 
 % Only run if CAD model has changed on OnShape
 %run("OnshapeTest\Onshape_Test.m")
-run("OnshapeTest\Assembly1_DataFile.m")
-load("Gait Cycles\cheetah_trajectory.mat")
+run("OnshapeTest\Assembly1_DataFile.m");
 
 
 
@@ -55,11 +54,8 @@ default_right_data_time = Default_right_data(:,1);
 default_right_data_hip = Default_right_data(:,2);
 default_right_data_ankle = Default_right_data(:,3);
 
-%loading Cheetah Gait Cycles (will need to replace with your path):
-%load('jAngs_cheetah_10_rad.mat');
-load('jAngs_cheetah_with_stationary2.mat');
-%load('quadruped_walking_gait_data.mat');
-load('quadruped_gait_with_stationary2.mat');
+
+
 
 %%
 % Define leg weights
@@ -71,9 +67,10 @@ friction_coefficient = 0.9;
 back_leg_weight = 3.5;
 gravity = 9.81;
 
+%loading Cheetah Gait Cycles (will need to replace with your path):
 %load('jAngs_cheetah_10_rad.mat');
 %load('jAngs_cheetah_55_rad.mat');
-%load('quadruped_walking_gait_data.mat');
+load('walking_traj_stationary2.mat');
 
 %For Optimization
 load('walking_waypoints.mat');
