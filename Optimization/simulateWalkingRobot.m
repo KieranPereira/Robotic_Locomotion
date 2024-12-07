@@ -45,8 +45,8 @@ function penalty = simulateWalkingRobot(params,mdlName,scaleFactor,gait_period,a
 %dec 5 change, want travers in x direction instead
     % Unpack logged data
     measBody = get(simout.simout,'measBody').Values;
-    yMax = max(abs(measBody.Y.Data))+0.38;
-    xEnd = measBody.X.Data(end)-0.3;
+    yMax = max(abs(measBody.Y.Data));
+    xEnd = measBody.X.Data(end);
     tEnd = simout.tout(end);
 
     % Calculate penalty from logged data
