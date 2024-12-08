@@ -38,9 +38,9 @@ init_body_height = h_final;
 % Initial joint angles (rad) and velocities (rad/s)
 d2r = pi/180;
 init_ang_FL = d2r * quadrupedInverseKinematics(init_foot_disp_x,-init_body_height,l1,l2);
-init_ang_FR = init_ang_FL;
-init_ang_RL = init_ang_FL;
-init_ang_RR = init_ang_FL;
+init_ang_FR = init_ang_FL
+init_ang_RL = -init_ang_FL;
+init_ang_RR = -init_ang_FL;
 init_whip_FL = 0;
 init_whip_FR = 0;
 init_whip_RL = 0;
@@ -51,7 +51,7 @@ foot_height = 0.05*l2*(1-sin(2*pi-(3*pi/2+init_ang_FL(1)+init_ang_FL(2))));
 y_init = init_body_height + foot_height;
 
 % Initial body speeds in x,y (m/s)
-vx_init = 5;
+vx_init = 0;
 vy_init = 0;
 
 % Contact friction properties
@@ -83,7 +83,7 @@ vx_max = 50;                      % max horizontal speed of body
 vy_max = 10;                      % max vertical speed of body
 vz_max = 2.5;                      % max lateral speed of body
 roll_max = 10 * d2r;               % max roll angle of body
-pitch_max = 20 * d2r;              % max pitch angle of body
+pitch_max = 40 * d2r;              % max pitch angle of body
 yaw_max = 20 * d2r;                % max yaw angle of body
 omega_x_max = pi/2;                % max angular speed about x
 omega_y_max = pi/2;                % max angular speed about x
@@ -102,8 +102,6 @@ q_knee_max_F = 120 * d2r;
 q_knee_max_R = 0 * d2r;
 
 w_max = 2*pi*120/60;                % hip and knee joint angular speed limit
-y_max = l1 + l2;  % max height of body from ground
+y_max = l1 + l2;                    % max height of body from ground
 normal_force_max = ((M+4*m1+4*m2)*abs(g))/4;
 friction_force_max = mu_static * normal_force_max;
-
-
