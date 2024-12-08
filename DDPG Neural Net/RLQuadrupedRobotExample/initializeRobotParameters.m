@@ -102,7 +102,7 @@ q_knee_max_F = 120 * d2r;
 q_knee_max_R = 0 * d2r;
 
 w_max = 2*pi*120/60;                % hip and knee joint angular speed limit
-y_max = l1*cos(q_hip_max) + l2*cos(q_hip_max+q_knee_min);  % max height of body from ground
+y_max = l1 + l2;  % max height of body from ground
 normal_force_max = ((M+4*m1+4*m2)*abs(g))/4;
 friction_force_max = mu_static * normal_force_max;
 
