@@ -26,7 +26,7 @@ g = -9.81;
 Ts = 0.025;
 
 % Simulation Time (s)
-Tf = 15;
+Tf = 25;
 
 % Desired height of the torso (m)
 h_final = 0.75;
