@@ -98,7 +98,7 @@ q_hip_max_R = 120 * d2r;
 q_knee_min_F = 0 * d2r;
 q_knee_min_R = -60 * d2r;
 
-q_knee_max_F = 120 * d2r;
+q_knee_max_F = 180 * d2r;
 q_knee_max_R = 0 * d2r;
 
 w_max = 2*pi*120/60;                % hip and knee joint angular speed limit
