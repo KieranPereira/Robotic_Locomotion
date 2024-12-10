@@ -9,9 +9,9 @@ l1 = 0.5517;  % Link #1 length (m)
 l2 = 0.5517;  % Link #2 length (m)
 
 % Robot mass
-M = 2;      % Torso mass (kg)
-m1 = 0.2;   % Leg link #1 mass (kg)
-m2 = 0.2;   % Leg link #2 mass (kg)
+M = 20;      % Torso mass (kg)
+m1 = 2;   % Leg link #1 mass (kg)
+m2 = 2;   % Leg link #2 mass (kg)
 
 % Moment of inertia (kg-m^2)
 Ixx = 1/12 * M * ((0.1*L_back)^2 + (0.1*L_back)^2);
@@ -30,6 +30,9 @@ Tf = 25;
 
 % Desired height of the torso (m)
 h_final = 0.75;
+
+% Contact bias
+contact_bias = 1;
 
 % Initial body height and foot displacement (m)
 init_foot_disp_x = 0;
@@ -55,8 +58,8 @@ vx_init = 0;
 vy_init = 0;
 
 % Contact friction properties
-mu_kinetic = 0.88;
-mu_static = 0.9;
+mu_kinetic = 0.93;
+mu_static = 0.95;
 v_thres = 0.001;
 
 % Ground properties
