@@ -32,7 +32,7 @@ Tf = 25;
 h_final = 0.75;
 
 % Contact bias
-contact_bias = 1;
+contact_bias = 5;
 
 % Initial body height and foot displacement (m)
 init_foot_disp_x = 0;
